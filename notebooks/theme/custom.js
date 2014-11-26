@@ -13,7 +13,7 @@ Just include the following in the first cell
 Or for Development purposes
 
     %%javascript
-    $.getScript("http://127.0.0.1:8888/files/theme/custom.js")
+    $.getScript("https://127.0.0.1:8888/files/theme/custom.js")
 
 Or Combined
 
@@ -21,7 +21,7 @@ Or Combined
     function is_local(){
       return (document.location.hostname == "localhost" || document.location.hostname == '127.0.0.1')
     }
-    var url = is_local() ? "http://127.0.0.1:8888/files/theme/custom.js" : "http://odhk.github.io/hyrule_theme/custom.js"
+    var url = is_local() ? "https://127.0.0.1:8888/files/theme/custom.js" : "http://odhk.github.io/hyrule_theme/custom.js"
     $.getScript(url)
 
 */
@@ -39,7 +39,7 @@ $('.cell:first').hide()
 // Load the styles
 
 if (is_local()){
-    theme_url = 'http://127.0.0.1:8888/files/theme/'
+    theme_url = 'https://127.0.0.1:8888/files/theme/'
 }
 
 $('<link>')
@@ -56,7 +56,7 @@ $('<img>')
 // Load the assets
 
 if (is_local()){
-    asset_url = 'http://127.0.0.1:8888/files/assets/'
+    asset_url = 'https://127.0.0.1:8888/files/assets/'
 }
 
 $('img[src^="assets/"]').each(

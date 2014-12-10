@@ -39,7 +39,7 @@ $('.cell:first').hide()
 // Load the styles
 
 if (is_local()){
-    theme_url = 'https://127.0.0.1:8888/files/theme/'
+    theme_url = 'https://localhost:8888/files/theme/'
 }
 
 $('<link>')
@@ -56,7 +56,7 @@ $('<img>')
 // Load the assets
 
 if (is_local()){
-    asset_url = 'https://127.0.0.1:8888/files/assets/'
+    asset_url = 'https://localhost:8888/files/assets/'
 }
 
 $('img[src^="assets/"]').each(

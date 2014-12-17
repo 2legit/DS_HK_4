@@ -38,7 +38,7 @@ plt.show()
 stop['speed_squared'] = stop['speed'] ** 2
 speed_squared = stop[['speed','speed_squared']].values
 
-lasso = linear_model.Lasso()
+lasso = linear_model.Lasso(normalize=True)
 lasso.fit(speed_squared, dist)
 
 print "\nSpeed | Distance"
@@ -129,9 +129,9 @@ fp_value = feature_selection.univariate_selection.f_regression(cars_input, mpg)
 
 p_value = zip(cars_input.columns.values,fp_value[1])
 
-sorted(p_value,key=lambda x: x[1])
+sorted_p_value = sorted(p_value,key=lambda x: x[1])
 
-best_five = [x[0] for x in p_value][:5]
+best_five = [x[0] for x in sorted_p_value][:5]
 
 X = cars_input[best_five].values
 
